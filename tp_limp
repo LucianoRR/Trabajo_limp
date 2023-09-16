@@ -1,0 +1,309 @@
+/*Etapa 1*/
+
+/*1-Realizar una función que reciba el radio de un círculo como parámetro y retorna el perímetro del mismo.*/
+/*function calcularPerimetro(radio){
+    const pi = 3.1416;
+let resultado = 2*pi*radio;
+return resultado
+}
+let radioCirculo= parseFloat(prompt("Ingresar radio del circulo: "));
+    let perimetroCirculo= calcularPerimetro(radioCirculo);
+    document.write("El area del circulo es: "+ perimetroCirculo);
+*/
+
+/*2-Realizar una función que reciba como parámetros la medida en cm de los catetos de un triángulo rectángulo y retorne la medida en cm de la hipotenusa.*/
+/*function calcularHipotenusa(catetoA,catetoB){
+let hipotenusa=(catetoA*catetoA+catetoB*catetoB);
+let resultado=Math.sqrt(hipotenusa);
+return resultado
+}
+let lado1= parseFloat(prompt("Ingresar lado1 triangulo: "));
+let lado2= parseFloat(prompt("Ingresar lado2 triangulo: "));
+let hip= calcularHipotenusa(lado1,lado2);
+console.log("El area del triangulo es: "+hip);
+*/
+
+/*3-Realizar una función que reciba como parámetro el precio de un artículo y el porcentaje de descuento, debe retornar el precio del producto con el descuento aplicado.*/
+/*function calcularDescuento(precio,descuento){
+let resultado1=((descuento/100)*precio)
+let resultado2=precio-resultado1
+return resultado2
+}
+let precio= parseFloat(prompt("Ingresar precio: "));
+let descuento= parseFloat(prompt("Ingresar descuento: "));
+let precioFinal= calcularDescuento(precio,descuento);
+document.write("El precio final del producto es: "+precioFinal);
+*/
+/*4-Se quiere realizar un programa que genere el detalle de cada artículo vendido en una tienda. 
+-El precio en bruto se recibirá por teclado.
+-A cada producto vendido se le aplicará el 21% de IVA
+-Por ser época festiva todos los productos tienen un 10% de descuento.*/
+
+/*function calcularDescuento(precio){
+const iva=21
+const descuento=10
+let resultado1=((iva/100)*precio)
+console.log("Los impuestos agregados son "+resultado1)
+let resultado2=precio+resultado1
+let resultado3=((descuento/100)*resultado2)
+console.log("El descuento de temporada es "+resultado3)
+let resultado4=resultado2-resultado3
+return resultado4
+}
+
+let precio= parseFloat(prompt("Ingresar precio: "));
+let precioFinal=calcularDescuento(precio);
+console.log("El precio final del producto es: "+precioFinal);*/
+
+/*Etapa 2*/
+/*1-Realizar una función que reciba como parámetro el precio de un artículo en venta, la función deberá aplicar un cierto descuento y retornar el precio final del artículo.
+El descuento se aplicará de acuerdo al siguiente criterio:
+
+Si el precio es mayor a $1000 se aplica el 10% de descuento
+Si el precio es mayor a $3000 se aplica el 15% de descuento
+Si el precio es mayor a $5000 se aplica el 20% de descuento
+
+/*function ventaArticulos(precio){
+if (precio<=1000){
+        console.log("No hay descuento")
+        resultado1=precio*parseFloat(1);
+        return resultado1
+    }
+
+else if (precio>1000&precio<=3000){
+        console.log("Descuento de 10%")
+        resultado2=precio-parseFloat(precio*0.1);
+        return resultado2
+    }
+
+else if (precio>3000&precio<=5000){
+        console.log("Descuento de 15%")
+        resultado3=precio-parseFloat(precio*0.15);
+        return resultado3
+    }
+
+else{
+    console.log("Descuento de 20%")
+    resultado4=precio-parseFloat(precio*0.2);
+    return resultado4
+}
+    }
+
+let precio= prompt("Ingresar precio del producto: ");
+let calcularPrecio= ventaArticulos(precio);
+console.log("El precio final es: "+calcularPrecio);
+*/
+
+/*2-Escriba un programa en JavaScript que solicite al usuario ingresar el monto del producto a comprar y la cantidad de cuotas en las que desea pagar el artículo. Luego, calcule el monto de cada cuota mensual, considerando la tasa de interés correspondiente. Finalmente, muestre por pantalla el monto de cada cuota.
+
+El interés se calcula de la siguiente manera:
+En 12 cuotas: 5% de interés mensual.
+En 8 cuotas: 4% de interés mensual.
+En 6 cuotas: 3% de interés mensual.
+En 4 cuotas: 2% de interés mensual.
+*/
+
+
+/*function CalcularPrecio(precio,cuotas){
+let resultado1=precio/cuotas
+var precios=[4,6,8,12]
+
+if(cuotas==precios[3]){
+let resultado2=(5/100)*resultado1
+let resultado3=resultado1+resultado2
+return resultado3
+}
+
+else if(cuotas==precios[2]){
+let resultado2=(4/100)*resultado1
+let resultado3=resultado1+resultado2
+return resultado3
+}
+
+else if(cuotas==precios[1]){
+let resultado2=(3/100)*resultado1
+let resultado3=resultado1+resultado2
+return resultado3
+}
+
+else if(cuotas==precios[0]){
+let resultado2=(2/100)*resultado1
+let resultado3=resultado1+resultado2
+return resultado3
+}
+}
+
+let prueba1=prompt("Ingrese un precio: ");
+let prueba2=prompt("Ingrese las cuotas: ");
+let prueba3=CalcularPrecio(prueba1,prueba2);
+console.log("El reusltado es "+prueba3)
+*/
+
+/*3-Se tiene una caja como en la imagen, con 3 perillas y 3 lamparitas, cada perilla es capaz de suministrar al sistema de 0 a 100 unidades de potencia. 
+La lamparita 1 se encenderá en cuanto haya 50 unidades de potencia o mas en el sistema.
+La lamparita 2 se encenderá en cuanto haya 150 unidades de potencia o mas en el sistema.
+La lamparita 3 se encenderá en cuanto haya 250 unidades de potencia o mas en el sistema.
+Cuidado, el sistema explotará en cuanto haya 275 o mas unidades de potencia en el sistema!
+
+Se pide realizar un programa que simule el funcionamiento de esta caja, donde cada perilla estará representada por una constante y al ejecutar el programa se mostrará por consola el estado de todas las lamparitas.*/
+
+/*4-Se pide realizar un programa que calcule el salario de los empleados de una despensa. El mismo se calcula dependiendo de la categoría de cada empleado.
+
+Repositor: $15890 + un bono del 10%(1589+sueldo=17479)
+Supervisor: $35560 - 11% de jubilación.(sueldo-3911=31649)
+Cajero: sueldo fijo de $25630.
+
+El programa debe preguntar al empleado por su categoría y devolver el monto de su salario por consola.
+
+*/
+/*var sueldos=["repositor","supervisor","cajero"]
+let prueba1=prompt("Ingrese su trabajo: ")
+
+if(prueba1.toLowerCase()==sueldos[0]){
+    console.log("Su sueldo es 17479")
+}
+
+else if(prueba1.toLowerCase()==sueldos[1]){
+    console.log("Su sueldo es 31649")
+}
+
+else if(prueba1.toLowerCase()==sueldos[2]){
+    console.log("Su sueldo es 25630")
+}
+
+else(console.log("XD"))
+*/
+
+/*5-Para un popular juego de dados se quiere realizar un programa que ayude a identificar las jugadas a los nuevos jugadores. El juego se compone de 5 dados de 6 caras y tiene 4 jugadas especiales:
+
+Escalera: 1, 2, 3, 4, 5 / 2, 3, 4, 5, 6
+Full: 3 numeros iguales y otros 2 iguales, Ej: 2, 2 ,2 ,6 , 6 / 1, 1, 1, 5, 5
+Poker: 4 números iguales y uno diferente, Ej: 4, 4, 4, 4, 1 / 5, 5, 5, 5, 2
+Grande: Todos los dados iguales.
+
+El programa deberá pedir al usuario el resultado de su tirada y devolver por consola si tiene alguna de las jugadas especiales mencionadas.*/
+
+/*Etapa 3*/
+
+/*1-Crear un juego donde se genere un número aleatorio del 1 al 1000, y luego se le pedirá una entrada por teclado al usuario pidiéndole que intente adivinar el número secreto.
+Pero para ayudar al usuario cada vez que el falle, deberemos darles pistas basadas en alertas de colores:
+
+Alerta Azul: Si el número esta a mas de 100 unidades de distancia.
+Alerta Verde: Si el número esta a menos de 100 unidades de distancia.
+Alerta Amarilla: Si el número esta a menos de 50 unidades de distancia.
+Alerta Roja: Si el número esta a menos de 10 unidades de distancia.
+
+El juego sólo termina si el usuario adivina el número secreto.
+
+Ejemplo con el 500 como número secreto:
+
+Ingrese su número: 200
+Alerta Azul, aun estas lejos
+
+Ingrese su número: 410
+Alerta Verde, te estás acercando
+
+Ingrese su número: 460
+Alerta Amarilla, estas cerca
+
+Ingrese su número: 505
+Alerta Roja, estás muy cerca!
+
+Ingrese su número: 500
+¡Felicitaciones!
+*/
+
+/*2-Realizar un función que reciba como parámetros 2 números enteros y retorne el mínimo común múltiplo entre esos números.*/
+
+/*3-Realizar un función que reciba como parámetros 2 números enteros y retorne el divisor común mayor entre esos números.*/
+/*function maximoComunDivisor(num1, num2){
+let temporal;
+while (num2 !== 0) {
+        temporal = num2;
+        num2 = num1 % num2;
+        num1 = temporal;
+    }
+return num1;
+}
+let num1 =parseFloat(prompt("Ingrese un numero: "));
+let num2 =parseFloat(prompt("Ingrese otro numero: "));
+let resultado=maximoComunDivisor(num1,num2)
+console.log("Resultado: "+resultado)*/
+
+/*4-Realizar una función que reciba como parámetro un número entero y retorne true si es un número primo o false si no lo es.*/
+
+/*Etapa 4*/
+/*1-Realizar una función que reciba un número entero como parámetro y retorna el factorial de dicho número.*/
+/*function factorial (a) {
+	var total = 1; 
+	for (i=1; i<=a; i++) {
+		total = total * i; 
+	}
+	return total; 
+}
+ let num=parseFloat(prompt("Ingrese un numero:"))
+ let resultado=factorial (num)
+ console.log("El resultado final es: "+resultado)*/
+/*2-Realizar una función que reciba dos números enteros por parámetro e imprima por consola todos los números primos que hay entre esos números.*/
+
+/*3-Realizar una función que reciba un número entero como parámetro (la altura) y luego dibuje un triángulo por consola de la siguiente manera:*/
+
+/*function triangulo(num){
+    for(let i="*";i.length<=num;i+="*"){
+      console.log(i)  
+}
+}
+let altura=parseInt(prompt("Ingrese la altura del triangulo: "))
+let resultado=triangulo(altura)*/
+
+/*4-Realizar una función que reciba un número entero como parámetro (la altura) y luego dibuje un triángulo por consola de la siguiente manera:*/
+
+/*Etapa 5*/
+/*1-Realizar una función que reciba un string como parámetro  y devuelva el mismo string pero de manera invertida.*/
+
+/*function reverseString(texto) {
+  let string = texto.split("");
+    return string.reverse().join("");
+}
+
+let texto1=prompt("Ingrese un texto: ");
+let resultado=reverseString(texto1);
+console.log("La cadena invertida es:"+resultado)*/
+
+/*2-Realizar una función que reciba un string como parámetro y retorna true si es un palíndromo o false si no lo es.*/
+
+/*function palindromo(texto) {
+    return texto.split('').reverse().join('') == texto;
+}
+
+let texto1=prompt("Ingrese un texto: ")
+let resultado1=(palindromo(texto1));
+console.log(resultado1)*/
+
+/*3-Escribe una función llamada codificarString que reciba como parámetro un string y devuelva el mismo string codificado, cambiando todas las vocales por su respectivo número.*/
+
+
+/*4-Hacer una función decodificarString, que revierta los cambios hechos en el anterior punto.*/
+
+
+/*5-Escribe una función llamada codificarString que reciba como parámetro un string y devuelva el mismo string codificado, cambiando todas las letras por su letra siguiente en el abecedario.*/
+
+/*function reemplazarletras(texto) {
+    texto = texto.split('');
+
+    for(let i = 0; i < texto.length; ++i) {
+        switch(texto[i]) {
+            case 'z':
+                texto[i] = 'a';
+                break;
+            case 'Z':
+                texto[i] = 'A';
+                break;
+            default:
+                texto[i] = String.fromCharCode(texto[i].charCodeAt(0) + 1);
+        }
+    }
+    return texto.join('');
+}
+
+console.log(reemplazarletras('ABC'));*/
