@@ -171,7 +171,7 @@ else if(prueba1.toLowerCase()==sueldos[2]){
     console.log("Su sueldo es 25630")
 }
 
-else(console.log("XD"))
+else(console.log("Error"))
 */
 
 /*5-Para un popular juego de dados se quiere realizar un programa que ayude a identificar las jugadas a los nuevos jugadores. El juego se compone de 5 dados de 6 caras y tiene 4 jugadas especiales:
@@ -182,6 +182,32 @@ Poker: 4 números iguales y uno diferente, Ej: 4, 4, 4, 4, 1 / 5, 5, 5, 5, 2
 Grande: Todos los dados iguales.
 
 El programa deberá pedir al usuario el resultado de su tirada y devolver por consola si tiene alguna de las jugadas especiales mencionadas.*/
+
+function tiradaDados(dado1,dado2,dado3,dado4,dado5){
+let dados=[dado1,dado2,dado3,dado4,dado5]
+
+let c=""
+let d=""
+
+for(var i=0;i<dados.length;i++){
+		if(dados[i]==dados[i]){
+		   
+		
+		    c+=dados[i]
+		}
+}
+return c;
+
+
+}
+
+let dado1a=parseInt(prompt("Ingrese el resultado de un dado"))
+let dado2b=parseInt(prompt("Ingrese el resultado de un dado"))
+let dado3c=parseInt(prompt("Ingrese el resultado de un dado"))
+let dado4d=parseInt(prompt("Ingrese el resultado de un dado"))
+let dado5e=parseInt(prompt("Ingrese el resultado de un dado"))
+let resultado=tiradaDados(dado1a,dado2b,dado3c,dado4d,dado5e)
+console.log(resultado)
 
 /*Etapa 3*/
 
@@ -217,11 +243,11 @@ Ingrese su número: 500
 
 /*3-Realizar un función que reciba como parámetros 2 números enteros y retorne el divisor común mayor entre esos números.*/
 /*function maximoComunDivisor(num1, num2){
-let temporal;
+let t;
 while (num2 !== 0) {
-        temporal = num2;
+        t = num2;
         num2 = num1 % num2;
-        num1 = temporal;
+        num1 = t;
     }
 return num1;
 }
@@ -231,6 +257,13 @@ let resultado=maximoComunDivisor(num1,num2)
 console.log("Resultado: "+resultado)*/
 
 /*4-Realizar una función que reciba como parámetro un número entero y retorne true si es un número primo o false si no lo es.*/
+
+
+
+
+
+
+
 
 /*Etapa 4*/
 /*1-Realizar una función que reciba un número entero como parámetro y retorna el factorial de dicho número.*/
@@ -246,7 +279,19 @@ console.log("Resultado: "+resultado)*/
  console.log("El resultado final es: "+resultado)*/
 /*2-Realizar una función que reciba dos números enteros por parámetro e imprima por consola todos los números primos que hay entre esos números.*/
 
+
+
+
+
+
+
 /*3-Realizar una función que reciba un número entero como parámetro (la altura) y luego dibuje un triángulo por consola de la siguiente manera:*/
+
+
+
+
+
+
 
 /*function triangulo(num){
     for(let i="*";i.length<=num;i+="*"){
@@ -305,7 +350,6 @@ console.log(resultado1)*/
     }
     return texto.join('');
 }
-
 console.log(reemplazarletras('ABC'));*/
 
 /*Etapa 6*/
@@ -324,7 +368,7 @@ console.log("La union de las palabras en forma de array es: "+resultado)*/
 
 /*2-Escribe una función llamada interseccionDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga los elementos comunes a ambos arrays.*/
 
-function array (){
+/*function array (){
 const array1=[1,2,3,4,5,6];
 const array2=[2,4,6,78];
 
@@ -340,9 +384,9 @@ for(var i=0;i<array1.length;i++){
 }
 return c;
 }
-console.log(array())
+let resultado=array()
+console.log("Los resultados comunes entre arrays son: "+resultado)*/
 
 /*3-Escribe una función llamada diferenciaDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga los elementos que están en el primer array pero no en el segundo.*/
 
 /*4-Escribe una función llamada complementoDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga los elementos que están en el primer array pero no en el segundo, y viceversa.*/
-
