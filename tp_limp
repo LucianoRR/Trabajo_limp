@@ -197,6 +197,47 @@ Grande: Todos los dados iguales.
 
 El programa deberá pedir al usuario el resultado de su tirada y devolver por consola si tiene alguna de las jugadas especiales mencionadas.*/
 
+/*function repeticiones(array, numero){
+    let contador = 0;
+    
+    for(let i=0; i<array.length; i++){
+        if(array[i] === numero){
+            contador++;
+        }
+    }
+    
+    return contador;
+}
+
+function esPoker(dados){
+    let esPoker = false;
+    
+    if(repeticiones(dados, dados[0]) === 4){
+        esPoker = true;    
+    }
+    else if(repeticiones(dados, dados[0]) === 1){
+        if(repeticiones(dados[1]) === 4){
+            esPoker = true;
+        }
+    }
+    
+    return esPoker;
+}
+
+function esFull(dados){
+    let esFull = true;
+    
+    for(let i = 0; i < dados.length; i++){
+        let apariciones = repeticiones(dados, dados[i]);
+        if(apariciones >= 4 || apariciones ===1){
+            esFull = false;
+        }
+    }
+    
+    return esFull;
+}
+*/
+
 /*Etapa 3*/
 
 /*1-Crear un juego donde se genere un número aleatorio del 1 al 1000, y luego se le pedirá una entrada por teclado al usuario pidiéndole que intente adivinar el número secreto.
@@ -275,6 +316,37 @@ console.log(Primo(11))*/
 
 /*2-Realizar una función que reciba dos números enteros por parámetro e imprima por consola todos los números primos que hay entre esos números.*/
 
+/*function numPrimos(num1,num2){
+    for(i=num1;num1<num2;i++){
+        if (num1||num2<=1) {
+            return "No es primo";
+            }
+        if (num1||num2% 2 === 0) {
+            return "No es primo";
+            }
+    
+return "Es primo";
+    }
+}
+
+console.log(numPrimos(2,10))
+
+
+
+
+
+function Primo(numero){
+if (numero <= 1) {
+return "No es primo";
+}
+for (let i = 2; i < numero; i++) {
+if (numero % i === 0) {
+return "No es primo";
+}
+}
+return "Es primo";
+}
+*/
 
 /*3-Realizar una función que reciba un número entero como parámetro (la altura) y luego dibuje un triángulo por consola de la siguiente manera:*/
 
@@ -367,9 +439,10 @@ console.log(reemplazarletras('ABC'));*/
 
 /*Etapa 6*/
 /*1-Escribe una función llamada unionDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga todos los elementos de ambos arrays, sin duplicados.*/
+
 /*function Uniondeconjuntos(textoa,textob){
-    let a= textoa.split(',');
-    let b= textob.split(',');
+    let a= textoa.split('[]');
+    let b= textob.split('[]');
     let unionarray=a.concat(b);
     return unionarray
 }
@@ -377,32 +450,84 @@ console.log(reemplazarletras('ABC'));*/
 let texto1=prompt("Ingrese dos o mas palabras: ");
 let texto2=prompt("Ingrese otras dos o mas palabras: ");
 let resultado=Uniondeconjuntos(texto1,texto2);
-console.log("La union de las palabras en forma de array es: "+resultado)*/
+console.log("La union de las palabras en forma de array es: "+resultado)
+*/
 
 /*2-Escribe una función llamada interseccionDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga los elementos comunes a ambos arrays.*/
 
 /*function array (){
 const array1=[1,2,3,4,5,6];
 const array2=[2,4,6,78];
-
-let iguales=0;
 let c=""
+
 for(var i=0;i<array1.length;i++){
 	for(var j=0;j<array1.length;j++){
 		if(array1[i]==array2[j]){
-			iguales++;
 		    c+=array1[i]
 		}
 	}
 }
-return c;
+return JSON.stringify(c);
 }
 let resultado=array()
 console.log("Los resultados comunes entre arrays son: "+resultado)*/
 
 /*3-Escribe una función llamada diferenciaDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga los elementos que están en el primer array pero no en el segundo.*/
 
+/*let arrayA = [1,2,3,4];
+let arrayB = [3,4,5,6];
+
+function diferencia(arrayA, arrayB){
+    let arrayDiferencia = [];
+    
+    for(let i=0; i < arrayA.length; i++){
+        if(!arrayB.includes(arrayA[i])){
+            arrayDiferencia.push(arrayA[i]);
+        }
+    }
+    
+    return arrayDiferencia;
+}
+
+console.log(diferencia(arrayA, arrayB));
+*/
+
+
+
+
 /*4-Escribe una función llamada complementoDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga los elementos que están en el primer array pero no en el segundo, y viceversa.*/
+
+/*Etapa 7*/
+/*1-Escribe una función que reciba un array de números enteros y devuelva el mayor número del array.*/
+
+/*function mayorValor(unArray){
+    let mayorNumero = unArray[0];
+    for(let i = 0; i < unArray.length; i++){
+        if(unArray[i] > mayorNumero){
+            mayorNumero = unArray[i];
+        }
+    }
+    return mayorNumero;
+}
+
+console.log(mayorValor([120,5,2,3,4,45]))*/
+
+/*2-Escribe una función que reciba un array de números enteros y devuelva el menor número del array.*/
+
+/*function menorValor(unArray){
+    let menorNumero = unArray[0];
+    for(let i = 0; i < unArray.length; i++){
+        if(unArray[i] < menorNumero){
+            menorNumero = unArray[i];
+        }
+    }
+    return menorNumero;
+}
+
+console.log(menorValor([5,2,3,4,120]))*/
+
+/*3-Escribe una función que reciba un array de números enteros desordenados y devuelva un segundo array con los mismos números pero ordenados de menor a mayor.*/
+/*4-Escribe una función que reciba un array de números enteros desordenados y devuelva un segundo array con los mismos números pero ordenados de mayor a menor.*/
 
 
 /*console.log(Math.max(1, 3, 2));*/
