@@ -12,6 +12,7 @@ let radioCirculo= parseFloat(prompt("Ingresar radio del circulo: "));
 */
 
 /*2-Realizar una función que reciba como parámetros la medida en cm de los catetos de un triángulo rectángulo y retorne la medida en cm de la hipotenusa.*/
+
 /*function calcularHipotenusa(catetoA,catetoB){
 let hipotenusa=(catetoA*catetoA+catetoB*catetoB);
 let resultado=Math.sqrt(hipotenusa);
@@ -24,6 +25,7 @@ console.log("El area del triangulo es: "+hip);
 */
 
 /*3-Realizar una función que reciba como parámetro el precio de un artículo y el porcentaje de descuento, debe retornar el precio del producto con el descuento aplicado.*/
+
 /*function calcularDescuento(precio,descuento){
 let resultado1=((descuento/100)*precio)
 let resultado2=precio-resultado1
@@ -143,7 +145,7 @@ console.log("El reusltado es "+prueba3)
 La lamparita 1 se encenderá en cuanto haya 50 unidades de potencia o mas en el sistema.
 La lamparita 2 se encenderá en cuanto haya 150 unidades de potencia o mas en el sistema.
 La lamparita 3 se encenderá en cuanto haya 250 unidades de potencia o mas en el sistema.
-Cuidado, el sistema explotará en cuanto haya 275 o mas unidades de potencia en el sistema!
+Cuidado, el sistema explotará en cuanto haya 275 o mas unidades de potencia en el sistema!*/
 
 /*const interruptor1 =274; 
 
@@ -157,7 +159,7 @@ if(interruptor1>=250&&interruptor1<275){
    console.log("El foco 3 esta encendido ");
 }  
 else{
-   console.log("sss");
+   console.log("error sobrecarga");
 }
 */
 
@@ -271,27 +273,27 @@ Ingrese su número: 500
 /*2-Realizar un función que reciba como parámetros 2 números enteros y retorne el mínimo común múltiplo entre esos números.*/
 
 /*3-Realizar un función que reciba como parámetros 2 números enteros y retorne el divisor común mayor entre esos números.*/
-/*function maximoComunDivisor(num1, num2){
-let t;
-while (num2 !== 0) {
-        t = num2;
-        num2 = num1 % num2;
-        num1 = t;
+/*function dcm(num1, num2){
+let j=""
+while (num2 !== 0){
+        j = num2;
+        num2= num1% num2;
+        num1= j;
     }
 return num1;
 }
 let num1 =parseFloat(prompt("Ingrese un numero: "));
 let num2 =parseFloat(prompt("Ingrese otro numero: "));
-let resultado=maximoComunDivisor(num1,num2)
+let resultado=dcm(num1,num2)
 console.log("Resultado: "+resultado)*/
 
 /*4-Realizar una función que reciba como parámetro un número entero y retorne true si es un número primo o false si no lo es.*/
 
 /*function Primo(numero){
-if (numero <= 1) {
+if (numero<= 1) {
 return "No es primo";
 }
-for (let i = 2; i < numero; i++) {
+for (let i =2; i < numero; i++) {
 if (numero % i === 0) {
 return "No es primo";
 }
@@ -303,12 +305,12 @@ console.log(Primo(11))*/
 
 /*Etapa 4*/
 /*1-Realizar una función que reciba un número entero como parámetro y retorna el factorial de dicho número.*/
-/*function factorial (a) {
-	var total = 1; 
+/*function factorial(a){
+	let b=1; 
 	for (i=1; i<=a; i++) {
-		total = total * i; 
+		b= b*i; 
 	}
-	return total; 
+	return b; 
 }
  let num=parseFloat(prompt("Ingrese un numero:"))
  let resultado=factorial (num)
@@ -316,19 +318,30 @@ console.log(Primo(11))*/
 
 /*2-Realizar una función que reciba dos números enteros por parámetro e imprima por consola todos los números primos que hay entre esos números.*/
 
-/*function Primo(numero){
-if (numero <= 1) {
-return "No es primo";
-}
-for (let i = 2; i < numero; i++) {
-if (numero % i === 0) {
-return "No es primo";
+function Primo(num1,num2){
+for(let i=num1;num1<=num2;i++){
+   if(primo(i)){
+   console.log(i)
 }
 }
-return "Es primo";
 }
 
-console.log(Primo(4))*/
+function Primo2(numero){
+if (numero<= 1) {
+return false;
+}
+for (let i =2; i < numero; i++) {
+if (numero % i === 0) {
+return false;
+}
+}
+return true;
+}
+
+console.log(Primo2(10,150))
+
+
+
 
 /*3-Realizar una función que reciba un número entero como parámetro (la altura) y luego dibuje un triángulo por consola de la siguiente manera:*/
 
@@ -356,9 +369,7 @@ let resultado=triangulo(altura)*/
     for(let i = 0; i < espacios; i++){
         linea += " ";
     }
-    
     linea += "|";
-    
     console.log(linea);
 }
 
@@ -367,25 +378,24 @@ function imprimirPiramide(altura){
         imprimirLinea(altura, i);
     }
 }
-
 imprimirPiramide(15);*/
 
 /*Etapa 5*/
 /*1-Realizar una función que reciba un string como parámetro  y devuelva el mismo string pero de manera invertida.*/
 
-/*function reverseString(texto) {
+/*function invstring(texto) {
   let string = texto.split("");
     return string.reverse().join("");
 }
 
 let texto1=prompt("Ingrese un texto: ");
-let resultado=reverseString(texto1);
+let resultado=invstring(texto1);
 console.log("La cadena invertida es:"+resultado)*/
 
 /*2-Realizar una función que reciba un string como parámetro y retorna true si es un palíndromo o false si no lo es.*/
 
 /*function palindromo(texto) {
-    return texto.split('').reverse().join('') == texto;
+    return texto.split("").reverse().join("") == texto;
 }
 
 let texto1=prompt("Ingrese un texto: ")
@@ -393,98 +403,97 @@ let resultado1=(palindromo(texto1));
 console.log(resultado1)*/
 
 /*3-Escribe una función llamada codificarString que reciba como parámetro un string y devuelva el mismo string codificado, cambiando todas las vocales por su respectivo número.*/
-
-/*function reemplazarletras(texto) {
-    texto = texto.split('');
+/*
+function reemplazarletras(texto) {
+    texto = texto.split("");
 
     for(let i = 0; i < texto.length; ++i) {
         switch(texto[i]) {
-            case 'a':
-                texto[i] = '1';
+            case "a":
+                texto[i] = "1";
                 break;
-            case 'A':
-                texto[i] = '1';
+            case "A":
+                texto[i] = "1";
                 break;
-            case 'e':
-                texto[i] = '2';
+            case "e":
+                texto[i] = "2";
                 break;
-            case 'E':
-                texto[i] = '2';
+            case "E":
+                texto[i] = "2";
                 break;
-            case 'i':
-                texto[i] = '3';
+            case "i":
+                texto[i] = "3";
                 break;
-            case 'I':
-                texto[i] = '3';
+            case "I":
+                texto[i] = "3";
                 break;
-            case 'o':
-                texto[i] = '4';
+            case "o":
+                texto[i] = "4";
                 break;
-            case 'O':
-                texto[i] = '4';
+            case "O":
+                texto[i] = "4";
                 break;
-            case 'u':
-                texto[i] = '5';
+            case "u":
+                texto[i] = "5";
                 break;
-            case 'U':
-                texto[i] = '5';
+            case "U":
+                texto[i] = "5";
                 break;
         }
     }
-    return texto.join('');
+    return texto.join("");
 }
-console.log(reemplazarletras('oSO'));*/
-
+console.log(reemplazarletras("oSO"));
+*/
 /*4-Hacer una función decodificarString, que revierta los cambios hechos en el anterior punto.*/
 
 /*function reemplazarletras(texto) {
-    texto = texto.split('');
+    texto = texto.split(""); 
 
     for(let i = 0; i < texto.length; ++i) {
         switch(texto[i]) {
-            case '1':
-                texto[i] = 'a';
+            case "1":
+                texto[i] = "a";
                 break;
-            case '2':
-                texto[i] = 'e';
+            case "2":
+                texto[i] = "e";
                 break;
-            case '3':
-                texto[i] = 'i';
+            case "3":
+                texto[i] = "i";
                 break;
-            case '4':
-                texto[i] = 'o';
+            case "4":
+                texto[i] = "o";
                 break;
-            case '5':
-                texto[i] = 'u';
+            case "5":
+                texto[i] = "u";
                 break;
-          
         }
     }
-    return texto.join('');
+    return texto.join("");
 }
-console.log(reemplazarletras('4s4'));
+console.log(reemplazarletras("4s4"));
 */
 
 /*5-Escribe una función llamada codificarString que reciba como parámetro un string y devuelva el mismo string codificado, cambiando todas las letras por su letra siguiente en el abecedario.*/
 
-/*function reemplazarletras(texto) {
-    texto = texto.split('');
+/*function reemplazarletras(texto){
+    texto = texto.split("");
 
-    for(let i = 0; i < texto.length; ++i) {
-        switch(texto[i]) {
-            case 'z':
-                texto[i] = 'a';
+    for(let i =0; i< texto.length; ++i){
+        switch(texto[i]){
+            case "z":
+                texto[i] = "a";
                 break;
-            case 'Z':
-                texto[i] = 'A';
+            case "Z":
+                texto[i] = "A";
                 break;
             default:
-                texto[i] = String.fromCharCode(texto[i].charCodeAt(0) + 1);
+                texto[i] = String.fromCharCode(texto[i].charCodeAt(0)+1);
         }
     }
-    return texto.join('');
+    return texto.join("");
 }
-console.log(reemplazarletras('ABC'));*/
+console.log(reemplazarletras("ABC"));*/
 
 /*Etapa 6*/
 /*1-Escribe una función llamada unionDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga todos los elementos de ambos arrays, sin duplicados.*/
@@ -504,21 +513,21 @@ console.log("La union de las palabras en forma de array es: "+resultado)
 
 /*2-Escribe una función llamada interseccionDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga los elementos comunes a ambos arrays.*/
 
-/*function array (){
-const array1=[1,2,3,4,5,6];
-const array2=[2,4,6,78];
-let c=""
+/*let array1=[1,2,3,4,5,6];
+let array2=[2,4,6,78];
+function array(array1,array2){
+let c=[];
 
-for(var i=0;i<array1.length;i++){
-	for(var j=0;j<array1.length;j++){
-		if(array1[i]==array2[j]){
-		    c+=array1[i]
-		}
-	}
+for(let i=0; i< array1.length; i++){
+        if(array2.includes(array1[i])){
+            c.push(array1[i]);
+        }
+    }
+return c;
 }
-return JSON.stringify(c);
-}
-let resultado=array()
+
+
+let resultado=array(array1,array2)
 console.log("Los resultados comunes entre arrays son: "+resultado)*/
 
 /*3-Escribe una función llamada diferenciaDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga los elementos que están en el primer array pero no en el segundo.*/
@@ -539,9 +548,6 @@ function diferencia(arrayA, arrayB){
 }
 
 console.log(diferencia(arrayA, arrayB));*/
-
-
-
 
 
 /*4-Escribe una función llamada complementoDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga los elementos que están en el primer array pero no en el segundo, y viceversa.*/
@@ -610,7 +616,7 @@ console.log(menorValor([5,2,3,4,120]))*/
 
 /*let array1=[1,3,2,4,8,7]
 
-function ordenarmayor (array){
+function ordenarmayor(array){
     return array.sort( (a,b) => a -b );
 }
 
@@ -623,10 +629,76 @@ console.log(resultado)
 /*let array1=[1,3,2,4,8,7]
 
 function ordenarmayor (array){
-    return array.sort( (a,b) => b -a );
+    return array.sort( (a,b) =>b -a );
 }
 
 let resultado=ordenarmayor(array1);
 console.log(resultado)*/
+
+/*Etapa 8*/
+/*1-Realiza una función que reciba dos arrays de números enteros como parámetro y devuelva true si ambos arrays son iguales o false si no lo son.*/
+
+/*let array1=[1,3,2,4,8,7]
+let array2=[1,3,2,4,8,7]
+
+function diferencia(array1, array2){
+let contador=""
+
+for(let i=0; i< array1.length; i++){
+    if(array2.includes(array1[i])){
+     contador++
+    }
+}
+if(array1.length===array2.length & contador===array1.length){
+    return true
+}
+return false
+}
+let resultado=diferencia(array1,array2);
+console.log(resultado)
+*/
+
+/*2-Realiza una función que reciba un array de números enteros y devuelva el mismo array pero invertido.*/
+
+/*let array1=[1,3,2,4,8,7]
+
+function invstring(array1){
+  let s = array1.toString();
+  let a = s.split("");
+  let r = a.reverse().join("");
+  return r.split(',')
+}
+console.log(invstring(array1))*/
+
+/*3-Realiza una función que reciba un número entero y devuelva true si es un número capicúa o false si no lo es.*/
+
+/*function palindromo(num) {
+    return num.split("").reverse().join("") == num;
+}
+
+let num1=prompt("Ingrese un numero: ")
+let resultado1=(palindromo(num1));
+console.log(resultado1)
+*/
+
+/*4-Existe una fórmula muy interesante que sirve para generar un número capicúa a partir de casi cualquier número entero. La secuencia es la siguiente:
+
+	Partimos del 15:
+	
+	15 ➡️ 15 + 51 ➡️ 66 
+	66 es capicúa!
+
+	Partimos del 87:
+
+87 ➡️ 87 + 78 ➡️165 ➡️ 165 + 651 ➡️ 726 ➡️ 726 + 627 ➡️ 1353 ➡️ 1353 + 3531 ➡️ 4884
+4884 es capicúa!
+
+La secuencia comienza el con el número base, luego le sumamos su espejado, y nos fijamos si ese número es capicúa, si no lo es repetimos el proceso, continuamos así hasta que finalmente obtenemos nuestro número capicúa.
+Se pide realizar una función que reciba un número entero positivo como parámetro y retorna el número capicúa generado a partir de este.*/
+
+
+
+
+
 
 
