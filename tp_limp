@@ -318,10 +318,10 @@ console.log(Primo(11))*/
 
 /*2-Realizar una función que reciba dos números enteros por parámetro e imprima por consola todos los números primos que hay entre esos números.*/
 
-function Primo(num1,num2){
+/*function Primo(num1,num2){
 for(let i=num1;num1<=num2;i++){
-   if(primo(i)){
-   console.log(i)
+   if(Primo2(i)&(i)<=num2){
+   console.log(i);
 }
 }
 }
@@ -331,17 +331,15 @@ if (numero<= 1) {
 return false;
 }
 for (let i =2; i < numero; i++) {
-if (numero % i === 0) {
+if (numero % i === 0){
 return false;
 }
 }
 return true;
 }
 
-console.log(Primo2(10,150))
-
-
-
+console.log(Primo(1,20));
+*/
 
 /*3-Realizar una función que reciba un número entero como parámetro (la altura) y luego dibuje un triángulo por consola de la siguiente manera:*/
 
@@ -499,9 +497,9 @@ console.log(reemplazarletras("ABC"));*/
 /*1-Escribe una función llamada unionDeConjuntos que reciba dos arrays como parámetros y devuelva un nuevo array que contenga todos los elementos de ambos arrays, sin duplicados.*/
 
 /*function Uniondeconjuntos(textoa,textob){
-    let a= textoa.split('[]');
-    let b= textob.split('[]');
-    let unionarray=a.concat(b);
+    let a= textoa.split("[]");
+    let b= textob.split("[]");
+    let unionarray=(a.concat(b));
     return unionarray
 }
 
@@ -672,12 +670,12 @@ console.log(invstring(array1))*/
 
 /*3-Realiza una función que reciba un número entero y devuelva true si es un número capicúa o false si no lo es.*/
 
-/*function palindromo(num) {
+/*function capicua(num) {
     return num.split("").reverse().join("") == num;
 }
 
 let num1=prompt("Ingrese un numero: ")
-let resultado1=(palindromo(num1));
+let resultado1=(capicua(num1));
 console.log(resultado1)
 */
 
@@ -696,9 +694,16 @@ console.log(resultado1)
 La secuencia comienza el con el número base, luego le sumamos su espejado, y nos fijamos si ese número es capicúa, si no lo es repetimos el proceso, continuamos así hasta que finalmente obtenemos nuestro número capicúa.
 Se pide realizar una función que reciba un número entero positivo como parámetro y retorna el número capicúa generado a partir de este.*/
 
+/*function capicua(num) {
+    return num.split("").reverse().join("") == num;
+}
 
-
-
-
-
-
+function sumacap(num){
+do{
+    resultado=num+num}while(resultado!=capicua(resultado))
+    
+}
+let num1=prompt("Ingrese un numero: ")
+let resultado1=(sumacap(num1));
+console.log(resultado1)
+*/
